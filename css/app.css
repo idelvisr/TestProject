@@ -1,0 +1,203 @@
+@CHARSET "UTF-8";
+
+@import "../js/dojo/resources/dojo.css";
+@import "../js/dijit/themes/claro/claro.css";
+@import "./bootstrap.min.css";
+
+html, body {	
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+body{
+	
+}
+
+h1 {
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3.077em;
+    line-height: 0.9em;
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+    text-align: center;
+    font-family: "Open Sans",arial;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.154em;
+    color: #333;
+    margin-bottom:30px;
+}
+
+.input-lg{
+    height:30px !important;
+    border-radius: 2px !important;
+    margin: 2px !important;
+}
+
+.claro .dijitSelectLabel {
+    padding: 0px 0px 0px 9px !important;
+}
+
+.claro .dijitButtonText {
+    font-weight: bold;
+}
+
+#widget_email {
+    width: 260px !important;
+}
+
+#DetailedInfo .dijitTextBox {
+    width: 80% !important;
+}
+
+#SummaryInfo hr {
+    height:1px;
+    width:100%;
+    border-top:solid 2px silver;
+    padding-top:5px;
+}
+.input-username{
+    width: 300px !important;
+}
+.dijitValidationContainer {
+    padding: 1px 0px 0px 0px !important;
+}
+
+.dijitTextBox .dijitInputInner,.dijitPlaceHolder{
+    padding: 5px 0px 0px 5px !important;
+}
+
+.dijitValidationTextBoxError input.dijitValidationInner, .dijitSelect input, .dijitTextBox input.dijitArrowButtonInner {
+    height: 28px !important;
+}
+
+.input-group-addon {
+    border:0px !important;
+}
+
+.preloader {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 1em;
+	background: #fff url('../js/dijit/themes/claro/images/loadingAnimation.gif') no-repeat center center;
+	position: absolute;
+	z-index: 999;
+	font-size: 24px;
+	font-weight: bold;
+    overflow:hidden !important;
+    opacity:100;
+}
+
+#myContainer {
+	text-align: left;
+	padding-left: 2em;
+	background: none repeat scroll 0% 0% #F1F1F1;
+	border: 1px solid #E5E5E5;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    width:500px !important ;
+}
+
+.pageSubContentTitle {
+	color:#8e8e8e;
+	font-size:2em;
+	font-family:Verdana, Arial, sans-serif;
+	margin-bottom:1.75em;
+    margin-top:1.75em;
+}
+
+.LabelFor {
+    display: -moz-inline-box;
+    width: 12em;
+    min-width: 5em;
+    font-weight:bold;
+}
+.LabelFor .asterisk{
+    color:red;
+}
+
+#SummaryInfo .LabelFor {
+    display: -moz-inline-box;
+    width: 7em;
+    min-width: 5em;
+    font-weight:bold;
+}
+.labelRequired {
+    font-size: 1em;
+    color: #54927C;
+    width: 180px;
+    height: 20px;
+    text-align: right;
+    vertical-align: middle;
+    margin: 15px 15px 0px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-right: 10px;
+}
+
+pre {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -webkit-pre-wrap;
+	white-space: o-pre-wrap;
+	font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+	overflow: auto;
+	padding: 1em;
+	margin: 1em;
+	border: 1px solid black;
+	background-color: #EEEEEE;
+}
+
+code,
+.code {
+	border: 1px solid black;
+	font-size: 11px;
+	font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+	background-color: #EEEEEE;
+	padding: 2px;
+}
+
+.tabPane{
+	padding: 1em;
+}
+
+.info {
+	text-align: left;
+	margin: 1em;
+	padding: 1em;
+	background-color: #E9F4FE;
+	border: 1px solid #759DC0;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.formInfo {
+	text-align: left;
+	margin: 1em;
+	padding: 1em;
+	background-color: #E9F4FE;
+	border: 1px solid #759DC0;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+

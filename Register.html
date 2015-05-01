@@ -22,24 +22,24 @@
 <script>
     var model;
     require(["dojox/mvc", "controllers/primaryinfocontroller"],
-    function App(mvc) {
+    function App( mvc ) {
         // Initial data
         var accountdata = {
             "PrimaryInfo": {
-                "First": "a",
-                "Last": "b",
-                "Username": "c"
+                "First": "",
+                "Last": "",
+                "Username": ""
             },
             "DetailedInfo": {
-                "Address": "d",
-                "City": "f",
-                "State": "g",
+                "Address": "",
+                "City": "",
+                "State": "",
                 "StateName": "",
-                "Zip": "12345"
+                "Zip": ""
             }
         };
         model = mvc.newStatefulModel({ data: accountdata });
-        (new PrimaryWidget()).placeAt("ContentPanelId", "only").startup();
+        (new PrimaryWidget()).placeAt("ContentPanelId", "only").startup(); 
 	});
 </script>
 

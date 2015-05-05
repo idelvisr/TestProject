@@ -10,8 +10,8 @@
 
 <script>
     var dojoConfig = {
-        async : true,
-        parseOnLoad: true
+        async : false,
+        parseOnLoad: false
     };
 </script>
 <script src="js/dojo/dojo.js"></script>
@@ -34,7 +34,7 @@
                 "Address": "",
                 "City": "",
                 "State": "",
-                "StateName": "",
+                "StateName": "a",
                 "Zip": ""
             }
         };
@@ -53,6 +53,7 @@
             <div class="col-md-4">
                 <h1 class="pageSubContentTitle">Create Your Account</h1>
                 <div data-dojo-attach-point="LayoutDiv">
+                    <div id='preloader' class='preloader' data-dojo-attach-point='preloader'>Loading...</div>
                     <div id="ContentPanelId" data-dojo-type="dijit/layout/StackContainer" data-dojo-attach-point="ContentPanelId">
                     </div>
                 </div>

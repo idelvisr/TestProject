@@ -1,7 +1,7 @@
 define(["dojo/_base/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin", "dijit/_WidgetsInTemplateMixin",
-	"dojo/text!../views/summaryinfoform.html", "dojo/dom-style", "dojo/_base/fx", "dojo/dom", "dojo/dom-construct", "controllers/primaryinfocontroller", "controllers/detailedinfocontroller", "dijit/form/Button", "dojo/parser",
+	"dojo/text!../views/summaryinfoform.html", "dojo/dom-style", "controllers/primaryinfocontroller", "controllers/detailedinfocontroller",
     "dojox/mvc/Output","dojox/mvc/Group","dojo/domReady!"],
-	function (declare, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, summarytemplate, domStyle, fx, dom, domConstruct, primaryinfocontroller, detailedinfocontroller, Button, parser) {
+	function (declare, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, summarytemplate, domStyle, primaryinfocontroller, detailedinfocontroller) {
 	    return declare("SummaryWidget", [_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin], {
 	        templateString: summarytemplate,
 
@@ -12,23 +12,25 @@ define(["dojo/_base/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin", "dij
 	            this.model = model;
 	        },
 
+	        buildRendering: function () {
+	            this.inherited(arguments);
+	            $("#preloader").show();
+	        },
+
 	        postCreate: function () {
 	            this.inherited(arguments);
-	            var preloadwidg = new PreloaderWidget();
-	            preloadwidg.placeAt(this.summarydiv, "first");
-	            preloadwidg.endLoading();
+	            $("#preloader").fadeOut(400);
 	        },
 
 	        GoBasicInfo: function () {
-	            dijit.byId("Summaryform").destroyRecursive();
-	            (new PrimaryWidget()).placeAt("ContentPanelId", "only").startup();
-	            parser.parse("ContentPanelId")
+	            this.Summaryform.destroy();
+	            dijit.byId("DetailsForm").destroy();
+	            domStyle.set("BasicForm", 'display', 'block');
 	        },
 
 	        GoDetailInfo: function () {
-	            dijit.byId("Summaryform").destroyRecursive();
-	            (new DetailedWidget()).placeAt("ContentPanelId", "only").startup();
-	            parser.parse("ContentPanelId")
+	            this.Summaryform.destroy();
+	            domStyle.set("DetailsForm", 'display', 'block');
 	        }
 	    });
 	});

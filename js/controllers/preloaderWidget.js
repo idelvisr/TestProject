@@ -24,6 +24,16 @@ define([
         startup: function () {
             this.inherited(arguments);
         },
+        showLoading: function () {
+            var n = this.preloader;
+            dojo.fadeIn({
+                node: n,
+                duration: 1000,
+                onEnd: function () {
+                    domStyle.set(n, 'display', 'block');
+                }
+            }).play();
+        },
         endLoading: function () {
             var n = this.preloader;
             dojo.fadeOut({

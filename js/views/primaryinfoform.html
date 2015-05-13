@@ -1,0 +1,43 @@
+﻿<div id="primarydiv" data-dojo-attach-point="primarydiv">
+    <div data-dojo-type="dijit/form/Form" id="BasicForm" data-dojo-attach-point="BasicForm" action="" method="">
+        <h2>Primary info</h2>
+        <div class="form-group">
+            <label class="LabelFor" for="name"><span class="asterisk">*</span> Name</label><br />
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" id="firstname" name="firstname"
+                               data-dojo-type="dijit/form/ValidationTextBox"
+                               data-dojo-props="ref: 'model.PrimaryInfo.First',regExp: '[\\w]+'"
+                               required="true"
+                               ucfirst="true" invalidmessage=""
+                               placeholder="First" />
+                    </td>
+                    <td>
+                        <input type="text" id="lastname" name="lastname"
+                               data-dojo-type="dijit/form/ValidationTextBox"
+                               data-dojo-props="ref: 'model.PrimaryInfo.Last',regExp: '[\\w]+'"
+                               required="true"
+                               ucfirst="true" invalidmessage=""
+                               placeholder="Last" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <label class="LabelFor" for="email"><span class="asterisk">*</span> Choose your username</label><br />
+        <div class="form-group input-username">
+            <div class="input-group">
+                <input type="text" id="email" name="email"
+                       data-dojo-type="dijit/form/ValidationTextBox"
+                       data-dojo-props="ref: 'model.PrimaryInfo.Username'"
+                       required="true"
+                       ucfirst="true" invalidmessage="" />
+                <span class="input-group-addon">@gmail.com</span>
+            </div>
+        </div>
+        <div class="space-sep20"></div>
+        <div class="form-group">
+            <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="BasicInfoNext" data-dojo-attach-event="onClick:GoBasicInfo" label="Next Step &gt;&gt;" />
+        </div>
+    </div>
+</div>
